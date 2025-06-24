@@ -1,0 +1,22 @@
+
+Project Outline: Time Series Forecasting of CSAT Scores
+
+1. Data Preparation
+   - Loaded Excel file with correct header row (row 5).
+   - Parsed 'Call Timestamp' column as datetime and set it as index.
+
+2. Time Series Aggregation
+   - Resampled CSAT scores to daily averages for time series analysis.
+
+3. Stationarity Check
+   - Applied Augmented Dickey-Fuller test to verify stationarity.
+   - Result: Time series is stationary (p-value < 0.05).
+
+4. Model Selection and Forecasting
+   - Used SARIMA model with parameters (1,0,1)x(1,0,1,7).
+   - Forecasted CSAT scores for the next 30 days.
+
+5. Output
+   - Saved forecasted CSAT scores with confidence intervals to 'CSAT_Forecast_30_Days.csv'.
+   - Visualized forecast with matplotlib (optional).
+
